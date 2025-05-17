@@ -13103,8 +13103,16 @@ function flipTile(tile, index, array, guess) {
         tile.dataset.state = "correct";
         key.classList.add("correct");
       } else if (targetWord.includes(letter)) {
-        tile.dataset.state = "wrong-location";
-        key.classList.add("wrong-location");
+        let letterCountInTarget = targetWord.split(letter).length - 1;
+        let letterCountInGuessSoFar = guess.substring(0, index).split(letter).length - 1;
+
+        if (letterCountInGuessSoFar < letterCountInTarget) {
+          tile.dataset.state = "wrong-location";
+          key.classList.add("wrong-location");          
+        } else {
+          tile.dataset.state = "wrong";
+          key.classList.add("wrong");
+        }
       } else {
         tile.dataset.state = "wrong";
         key.classList.add("wrong");
@@ -13188,6 +13196,7 @@ function danceTiles(tiles) {
 }
 
 
+// balloon controls
 const balloonContainer = document.getElementById("balloon-container");
 
 function random(num) {
