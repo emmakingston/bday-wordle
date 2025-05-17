@@ -10,6 +10,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 70vh;
+  min-width: 70vw;
   margin: 0;
   padding: 0;
   padding-bottom: 1em;
@@ -73,8 +75,8 @@ body {
 
 .keyboard {
   display: grid;
-  grid-template-columns: repeat(20, minmax(auto, 1.25em));
-  grid-auto-rows: 3em;
+  grid-template-columns: repeat(20, minmax(auto, 1.5em));
+  grid-auto-rows: 4em;
   gap: 0.25em;
   justify-content: center;
 }
@@ -105,8 +107,8 @@ body {
 }
 
 .key > svg {
-  width: 1.75em;
-  height: 1.75em;
+  width: 2em;
+  height: 2em;
 }
 
 .key:hover,
@@ -138,7 +140,7 @@ body {
   grid-template-columns: repeat(5, 4em);
   grid-template-rows: repeat(6, 4em);
   gap: 0.25em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   margin-top: 1.5em;
 }
 
