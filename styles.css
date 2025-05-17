@@ -15,6 +15,61 @@ body {
   font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
 }
 
+.topnav {
+  font-size: inherit;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #B2AC88; 
+  color: white;
+  fill: white;
+  border-radius: 0.25em;
+  cursor: pointer;
+  user-select: none;  
+}
+
+.navopt {
+  color: white;
+  fill: white;
+  text-decoration: none; 
+  padding: 2% 5% 5% 2%;
+}
+
+.active {
+  text-decoration: none; 
+  font-weight: bold;
+  color: white;
+  fill: white;
+}
+
+.bday-message {
+  font-size: inherit;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #B2AC88; 
+  color: white;
+  fill: white;
+  border-radius: 0.25em;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.presents {
+  font-size: inherit;
+  background-color: white; 
+}
+
 .keyboard {
   display: grid;
   grid-template-columns: repeat(20, minmax(auto, 1.25em));
@@ -208,4 +263,59 @@ body {
 
 .alert.hide {
   opacity: 0;
+}
+
+
+body {
+  margin: 0;
+}
+
+#balloon-container {
+  height: 100vh;
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: opacity 500ms;
+}
+
+.balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #FDFD96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes float {
+  from {transform: translateY(100vh);
+  opacity: 1;}
+  to {transform: translateY(-300vh);
+  opacity: 0;}
 }
