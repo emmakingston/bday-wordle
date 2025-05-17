@@ -12982,8 +12982,6 @@ var path = window.location.pathname;
 var page = path.split("/").pop();
 const difficulty = page.replace(".html", "")
 
-console.log(difficulty)
-
 var targetWord = "";
 switch (difficulty){
   case "easy":
